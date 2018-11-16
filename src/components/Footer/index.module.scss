@@ -1,0 +1,56 @@
+.wrap{
+    width: 100%;
+    height: 15vw;
+    background: #130107;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .infoWrap{
+        width: 80vw;
+        height: 8vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media screen and (max-width: 780px) {
+            width: 50vw;
+        }
+        .infoItem{
+            width: 15vw;
+            height: 4vw;
+            p{
+                font-style: normal;
+                font-weight: normal;
+                line-height: 2vw;
+                font-size: 1.4vw;
+                text-align: right;
+                color: #676767
+            }
+        }
+        .social{
+            display: flex;
+            justify-content: space-between;
+            width: 13vw;
+            height: 3vw;
+            svg{     
+                &:hover{  
+                    path{
+                        transition: fill 1s ease;
+                        fill: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .logo{
+            width: 20vw;
+            height: 10vw;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+            @media screen and (max-width: 780px) {
+                width: 12vw;
+                height: 6vw;
+            }
+        }
+    }
+}

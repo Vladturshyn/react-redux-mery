@@ -1,0 +1,111 @@
+.text{
+    width: 100%;
+    height: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text p {
+    color: #262424;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.5vw;
+    font-size: 2.5vw;
+    text-align: center;
+    text-transform: uppercase; 
+}
+* {
+  outline: none;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 45vw;
+  overflow: hidden;
+}
+
+.slide {
+  height: 45vw;
+  background-size: cover !important;
+}
+
+.slide::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.previousButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: url('../../assets/images/arrow.svg') no-repeat center center / 2vw;
+    fill: #262424;
+    width: 4.5vw;
+    height: 4.5vw;
+    text-indent: -1000vw;
+    margin: 0 29vw;
+    cursor: pointer;
+}
+
+.previousButton:hover, .nextButton:hover {
+    background: url('../../assets/images/arrow.svg') no-repeat center center / 16px;
+}
+ @media screen and (max-width: 1280px) {
+    .previousButton:hover, .nextButton:hover {
+    background: url('../../assets/images/arrow.svg') no-repeat center center / 2.3vw;
+}    
+}
+
+.previousButton {
+  left: 0;
+  -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
+          transform: rotate(180deg) translateY(calc(50% + 0px));
+}
+
+.nextButton {
+  right: 0;
+}
+
+.slider-content {
+  text-align: center;
+}
+
+.slider-content .inner {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slider-content .inner p {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.5vw;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 2.8vw;
+}
+.slider-content .inner p:nth-child(3){
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.5vw;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 1.2vw;
+}
+
+.slider-content img {
+  width: 22vw;
+  height: 28vw;
+  vertical-align: middle;
+}

@@ -1,0 +1,37 @@
+.slide p {
+	transition: all 0.3s ease;
+	-webkit-transform: translateY(20px);
+					transform: translateY(20px);
+	opacity: 0;
+}
+.slide img{
+	transition: all 0.3s ease;
+	-webkit-transform: translateX(0);
+					transform: translateY(0);
+	opacity: 0;
+}
+
+
+
+.slide.animateIn.previous p,
+.slide.current p,
+.slide.animateIn.next p{
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
+	-webkit-transition-delay: .9s;
+					transition-delay: .9s;
+					opacity: 1;
+}
+
+
+.slide.animateIn.previous img,
+.slide.current img,
+.slide.animateIn.next img{
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
+	-webkit-transition-delay: 1.2s;
+					transition-delay: 1.2s;
+					opacity: 1;
+}
+
+
