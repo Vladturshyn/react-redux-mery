@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm,reset } from 'redux-form';
+import ScrollableAnchor from "react-scrollable-anchor";
+import { configureAnchors } from "react-scrollable-anchor";
+
 import style from './index.module.scss';
 
 const validate = values => {
@@ -46,36 +49,50 @@ const renderMessageField = ({input, label, type}) =>(
 )
 
 class SyncValidationForm extends Component {
+  handleSubmit = values => {
+    const form = new FormData();
+
+    form.append("email", values.email);
+    form.append("name", values.name);
+    form.append("message", values.message);
+    form.append("phone", values.phone);
+
+    this.props.addNewForm(form);
+  };   
+
   render() {
+    configureAnchors({ scrollDuration: 900 });
     const { handleSubmit, submitting} = this.props;
     return (
-      <div >
-      <div className={style.wrapText}>
-        <p>CONTACT US</p>
-      </div>
-      <div className={style.mainWrap}>
-        <form 
-        onSubmit={handleSubmit} 
-        className={style.wrapForm}
-        >
+      <ScrollableAnchor id={"contacts"}>
+        <div>
+          <div className={style.wrapText}>
+            <p>CONTACT US</p>
+          </div>
+          <div className={style.mainWrap}>
+            <form 
+            onSubmit={handleSubmit} 
+            className={style.wrapForm}
+            >
 
-          <div className={style.leftSide}>
-            <Field name="name" type="text" component={renderField} label="Name"/>
-            <Field name="email" type="email" component={renderField} label="Email"/>
-            <Field name="phone" type="phone" component={renderField} label="Phone"/>
+              <div className={style.leftSide}>
+                <Field name="name" type="text" component={renderField} label="Name"/>
+                <Field name="email" type="email" component={renderField} label="Email"/>
+                <Field name="phone" type="phone" component={renderField} label="Phone"/>
+              </div>
+              <div className={style.rightSide}>
+                <Field name="message" component={renderMessageField} label="Message"/>
+                <div className={style.wrapBtn}>
+                  <button 
+                    type="submit" 
+                    disabled={submitting}
+                    ><p>Request trial</p></button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div className={style.rightSide}>
-            <Field name="message" component={renderMessageField} label="Message"/>
-            <div className={style.wrapBtn}>
-              <button 
-                type="submit" 
-                disabled={submitting}
-                ><p>Request trial</p></button>
-            </div>
-          </div>
-        </form>
       </div>
-    </div>
+    </ScrollableAnchor>
     )
   }
 }
@@ -83,8 +100,6 @@ class SyncValidationForm extends Component {
 const afterSubmit = (result, dispatch) =>{ 
   dispatch(reset('syncValidation')); 
 }
-
-
 
 export default reduxForm({
   form: 'syncValidation',

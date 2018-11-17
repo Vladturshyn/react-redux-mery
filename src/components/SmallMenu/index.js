@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
-import './index.module.scss'
-import logo from '../../assets/images/Logo_white.svg'
+import React from 'react';
+import logo from '../../assets/images/Logo_white.svg';
+import './index.module.scss';
 
-export default class SmallMenu extends Component {
-  render() {
-    return (
+const SmallMenu = () => (
       <nav>
           <ul>
             <li><a href="#home">HOME</a></li>
@@ -17,6 +15,5 @@ export default class SmallMenu extends Component {
             <li><a href="#contacts">CONTACTS</a></li>
           </ul>
       </nav>
-    )
-  }
-}
+)
+export default SmallMenu;

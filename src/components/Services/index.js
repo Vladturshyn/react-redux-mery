@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import style from './index.module.scss'
-
+import React, { Component } from 'react';
+import style from './index.module.scss';
+import ScrollableAnchor from "react-scrollable-anchor";
+import { configureAnchors } from "react-scrollable-anchor";
 
 export const DevelopmentIcon = () => {
   return (
@@ -42,36 +43,39 @@ export const ConsiltingIcon = () => {
 
 export default class Services extends Component {
   render() {
+    configureAnchors({ scrollDuration: 900 });
     return (
-      <section>
-        <div className={style.head}>
-            <p>Services</p>
+      <ScrollableAnchor id={"services"}>
+        <div className={style.section}>
+          <div className={style.head}>
+              <p>Services</p>
+          </div>
+          <div className={style.componentsWrap}>
+              <div className={style.item}>
+                <p>Data Generation</p>
+                <SittingsIcon />
+                <p>Our team of sales managers work with you to define lead criteria specific to your addressable market and provide the smartest targeted leads to boost your account-based sales strategy.</p>
+              </div>
+              <div className={style.item}>
+                <p>Data Enrichment</p>
+                <MegaphoneIcon />
+                <p>Enhance each lead with unique parameters that common data assets can’t access. Utilize tailor-made data-insights, researched for each lead, to significantly increase conversion and close more deals.</p>
+              </div>
+              <div className={style.item}>
+                <p>Data QUALITY</p>
+                <DevelopmentIcon />
+                <p>Our experienced data team utilizes advanced technology and follows a strict quality assurance process to verify every data point we source. This ensures you receive unmatched quality and accuracy for every lead.</p>
+              </div>
+              <div className={style.item}>
+                <p>Sales Development</p>
+                <ConsiltingIcon />
+                <p>A dedicated Sales Development Representative combines a well-researched target data set with an experienced outbound sales strategy to convert top-of-the-funnel prospects into qualified sales appointments.</p>
+              </div>
+              <div className={style.forMobile}>
+              </div>
+          </div>
         </div>
-        <div className={style.componentsWrap}>
-            <div className={style.item}>
-              <p>Data Generation</p>
-              <SittingsIcon />
-              <p>Our team of sales managers work with you to define lead criteria specific to your addressable market and provide the smartest targeted leads to boost your account-based sales strategy.</p>
-            </div>
-            <div className={style.item}>
-              <p>Data Enrichment</p>
-              <MegaphoneIcon />
-              <p>Enhance each lead with unique parameters that common data assets can’t access. Utilize tailor-made data-insights, researched for each lead, to significantly increase conversion and close more deals.</p>
-            </div>
-            <div className={style.item}>
-              <p>Data QUALITY</p>
-              <DevelopmentIcon />
-              <p>Our experienced data team utilizes advanced technology and follows a strict quality assurance process to verify every data point we source. This ensures you receive unmatched quality and accuracy for every lead.</p>
-            </div>
-            <div className={style.item}>
-              <p>Sales Development</p>
-              <ConsiltingIcon />
-              <p>A dedicated Sales Development Representative combines a well-researched target data set with an experienced outbound sales strategy to convert top-of-the-funnel prospects into qualified sales appointments.</p>
-            </div>
-            <div className={style.forMobile}>
-            </div>
-        </div>
-      </section>
+      </ScrollableAnchor>
     )
   }
 }
