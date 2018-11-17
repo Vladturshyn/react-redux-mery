@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-redux-mery/static/media/hubspot.9abf33ae.png"
   },
   {
-    "revision": "7edb061cde9b0815b519",
+    "revision": "dd32267adad7042231cd",
     "url": "/react-redux-mery/static/css/main.ba7e1c6a.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/react-redux-mery/static/media/item2.a0f17561.png"
   },
   {
-    "revision": "7edb061cde9b0815b519",
-    "url": "/react-redux-mery/static/js/main.7edb061c.chunk.js"
+    "revision": "dd32267adad7042231cd",
+    "url": "/react-redux-mery/static/js/main.dd32267a.chunk.js"
   },
   {
     "revision": "d45762c5b7f2419c0a6c92265dadd06e",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/react-redux-mery/static/css/1.e527d045.chunk.css"
   },
   {
-    "revision": "f9724ddeb8c9b5ef6e46bbbb2d3717ed",
+    "revision": "ba83aebc7a4e02f73b69b65a40d3356b",
     "url": "/react-redux-mery/index.html"
   }
 ];

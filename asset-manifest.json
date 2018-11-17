@@ -1,7 +1,7 @@
 {
   "main.css": "/react-redux-mery/static/css/main.ba7e1c6a.chunk.css",
-  "main.js": "/react-redux-mery/static/js/main.7edb061c.chunk.js",
-  "main.js.map": "/react-redux-mery/static/js/main.7edb061c.chunk.js.map",
+  "main.js": "/react-redux-mery/static/js/main.dd32267a.chunk.js",
+  "main.js.map": "/react-redux-mery/static/js/main.dd32267a.chunk.js.map",
   "static/css/1.e527d045.chunk.css": "/react-redux-mery/static/css/1.e527d045.chunk.css",
   "static/js/1.db66d3ea.chunk.js": "/react-redux-mery/static/js/1.db66d3ea.chunk.js",
   "static/js/1.db66d3ea.chunk.js.map": "/react-redux-mery/static/js/1.db66d3ea.chunk.js.map",
@@ -24,6 +24,6 @@
   "static/css/1.e527d045.chunk.css.map": "/react-redux-mery/static/css/1.e527d045.chunk.css.map",
   "static/css/main.ba7e1c6a.chunk.css.map": "/react-redux-mery/static/css/main.ba7e1c6a.chunk.css.map",
   "index.html": "/react-redux-mery/index.html",
-  "precache-manifest.be3c695e9d0d3d5eceec4842b3955121.js": "/react-redux-mery/precache-manifest.be3c695e9d0d3d5eceec4842b3955121.js",
+  "precache-manifest.0415672b503eebe65f0ed70cd6380eec.js": "/react-redux-mery/precache-manifest.0415672b503eebe65f0ed70cd6380eec.js",
   "service-worker.js": "/react-redux-mery/service-worker.js"
 }
